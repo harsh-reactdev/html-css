@@ -136,6 +136,9 @@ a:hover {
 
 nav {
   /* text-align: center; */
+  display: flex;
+  width: auto;
+  overflow-x: scroll;
 }
 
 nav a:link {
