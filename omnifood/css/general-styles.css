@@ -26,9 +26,9 @@ Paragraph Default : 1.6
 
 - Primary : #e67e22
 
-- Tints : #fdf2e9, #fae5d3
+- Tints : #fdf2e9, #fae5d3, #eb984e
 
-- Shadows : #cf711f
+- Shadows : #cf711f, #45260a
 
 - Accents :
 
@@ -36,6 +36,7 @@ Paragraph Default : 1.6
 #555
 #333
 #6F6F6F -> lightest grey allowed on #fdf2e9
+
 
 --- SHADOWS
 
@@ -48,6 +49,13 @@ medium : 11px
 - Spacing System (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+
+*:focus {
+  outline: none;
+  /* outline: 2px dotted #e67e22; */
+  /* outline-offset: 6px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
 
 /* ********************************* */
 /* Reusable classes */
@@ -89,18 +97,23 @@ medium : 11px
   letter-spacing: 0.75;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
-  color: #fff;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   text-decoration: none;
+
+  /* only applies to .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
   transition: all 0.3s;
 }
-
 .btn--full:link,
 .btn--full:visited {
   background-color: #e67e22;
@@ -129,6 +142,18 @@ medium : 11px
 
 strong {
   font-weight: 500;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
