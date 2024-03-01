@@ -118,8 +118,14 @@
 
           <div class="hero-img-box">
             <picture>
-              <source src="./content/img/hero-reduced.png" type="image/png" />
-              <source src="./content/img/hero-reduced.webp" type="image/webp" />
+              <source
+                srcset="./content/img/hero-reduced.png"
+                type="image/png"
+              />
+              <source
+                srcset="./content/img/hero-reduced.webp"
+                type="image/webp"
+              />
               <img
                 src="./content/img/hero-reduced.png"
                 class="hero-img"
@@ -625,12 +631,12 @@
                 first meal is on us!
               </p>
 
-              <form action="#" class="cta-form">
+              <form action="#" class="cta-form" name="Sign-up" netlify>
                 <div>
                   <label for="fullName">Name</label>
                   <input
                     type="text"
-                    name="Name"
+                    name="full-name"
                     id="fullName"
                     placeholder="John Smith"
                     required
@@ -650,7 +656,7 @@
 
                 <div>
                   <label for="howDidYouHear">How did you hear about us ?</label>
-                  <select id="howDidYouHear" required>
+                  <select id="howDidYouHear" name="How-did-you-hear" required>
                     <option value="">--Select--</option>
                     <option value="social media">Social Media</option>
                     <option value="newspaper">Newspaper</option>
